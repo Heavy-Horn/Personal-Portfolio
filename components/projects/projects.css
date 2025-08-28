@@ -1,0 +1,95 @@
+.Wrapper {
+    display: grid;
+    grid-template-columns: 5vw auto 5vw;
+    grid-template-rows: 5vw 26vw 5vw 26vw 5vw 26vw;
+    border: black solid 1px;
+}
+
+.ShowcaseImage {
+    height: 26vw;
+    width: auto;
+    border: black solid 1px;
+}
+
+.Title {
+    grid-row: 1/2;
+    border: black solid 1px;
+}
+
+.Showcase1 {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-rows: auto 2vw auto;
+    grid-template-columns: 45vw 5vw 50vw;
+    border: black solid 1px;
+}
+
+.Showcase2 {
+    grid-row: 5/6;
+    display: grid;
+    grid-template-rows: auto 2vw auto;
+    grid-template-columns: 45vw 5vw 50vw;
+    border: black solid 1px;
+}
+
+.Showcase3 {
+    grid-row: 7/8;
+    display: grid;
+    grid-template-rows: auto 2vw auto;
+    grid-template-columns: 45vw 5vw auto;
+    border: black solid 1px;
+}
+
+.Showcase1 .ShowcaseImage {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border: black solid 1px;
+}
+
+.Showcase2 .ShowcaseImage {
+    grid-column: 3/4;
+    grid-row: 1/4;
+    border: black solid 1px;
+}
+
+.Showcase3 .ShowcaseImage {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border: black solid 1px;
+}
+
+.Showcase1 .ShowcaseTitle {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    border: black solid 1px;
+}
+
+.Showcase2 .ShowcaseTitle {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: black solid 1px;
+}
+
+.Showcase3 .ShowcaseTitle {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border: black solid 1px;
+}
+
+.Showcase1 .ShowcaseDescription {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    border: black solid 1px;
+}
+
+.Showcase2 .ShowcaseDescription {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: black solid 1px;
+}
+
+.Showcase3 .ShowcaseDescription {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    border: black solid 1px;
+}

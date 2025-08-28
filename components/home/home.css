@@ -1,0 +1,42 @@
+#ProfileImage {
+    width: 40vw;
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.Gallery {
+    width: 30vw;
+    height: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 5vw 40vw 5vw 40vw 5vw;
+    grid-template-rows: auto 5vw auto;
+}
+
+.Introduction {
+    grid-column: 4/6;
+    grid-row: 1/2;
+}
+
+.GalleryWrapper {
+    display: grid;
+    grid-template-columns: 30vw 3vw 30vw 3vw 30vw;
+    grid-column: 1/7;
+    grid-row: 3/4;
+    grid-template-rows: auto;
+}
+
+.GalleryFirst {
+    grid-column: 1/1;
+    grid-row: 1/2;
+}
+.GalleryMiddle {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.GalleryLast {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}

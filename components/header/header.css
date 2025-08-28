@@ -1,0 +1,13 @@
+.Logo {
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+}
