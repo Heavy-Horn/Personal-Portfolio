@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../components/header/header.css">
+    <link rel="stylesheet" href="../components/contact/contact.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Dylan Fry</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <img class="Logo" src="../assets/images/PLACEHOLDER-REMOVE BEFORE SUBMIT.jpg" alt="Logo">
+    <nav class="navigation">
+        <ul class="items">
+            <img class="logo" src="../assets/images/PLACEHOLDER-REMOVE BEFORE SUBMIT.jpg" alt="Logo">
             <li><a href="../pages/index.html">Home</a></li>
             <li><a href="../pages/projects.html">Projects</a></li>
             <li><a href="../pages/skills.html">Skills</a></li>
@@ -17,10 +18,19 @@
         </ul>
     </nav>
     
-    <div>
-        <h1></h1>
-        <p></p>
-        <form action=""></form>
+    <div class="wrapper">
+        <h1 class="title">Contact Me</h1>
+        <p class="description">If you want to reach out about something, fill out the form below and I'll respond to as soon as possible.</p>
+        <form class="contactform" autocomplete="on">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <input type="text" id="message" name="message" placeholder="Your Message" required>
+
+            <button class="button" type="submit">Send</button>
+            <button class="button secondary" type="reset">Clear</button>
+        </form>
     </div>
     <footer></footer>
 </body>

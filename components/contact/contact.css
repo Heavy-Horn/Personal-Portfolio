@@ -1,0 +1,50 @@
+.wrapper {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5vw 5vw 5vw 10vw 5vw auto 10vw;
+}
+
+.title {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.description {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.contactform {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    display: grid;
+    grid-template-columns: auto 5vw auto;
+    grid-template-rows: 5vw 4vw 6vw 4vw 20vw 3vw 5vw;
+}
+
+#name {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#email {
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+
+#message {
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+
+.button {
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+.secondary {
+    grid-row: 7/8;
+    grid-column: 3/4;
+}

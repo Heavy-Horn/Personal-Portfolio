@@ -1,95 +1,77 @@
-.Wrapper {
+.wrapper {
     display: grid;
-    grid-template-columns: 5vw auto 5vw;
-    grid-template-rows: 5vw 26vw 5vw 26vw 5vw 26vw;
-    border: black solid 1px;
+    grid-template-columns: auto;
+    grid-template-rows: 10vw auto 5vw;
 }
 
-.ShowcaseImage {
-    height: 26vw;
-    width: auto;
-    border: black solid 1px;
-}
-
-.Title {
+.title {
+    grid-column: 1/2;
     grid-row: 1/2;
-    border: black solid 1px;
 }
 
-.Showcase1 {
-    grid-row: 3/4;
+.projects {
     display: grid;
-    grid-template-rows: auto 2vw auto;
-    grid-template-columns: 45vw 5vw 50vw;
-    border: black solid 1px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    grid-template-columns: auto;
+    grid-template-rows: 28% 8% 28% 8% 28%;
 }
 
-.Showcase2 {
+.showcase1 {
+    display: grid;
+    grid-template-columns: 55% 5% auto;
+    grid-template-rows: 45% auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.showcase2 {
+    display: grid;
+    grid-template-columns: auto 5% 55%;
+    grid-template-rows: 45% auto;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.showcase3 {
+    display: grid;
+    grid-template-columns: 55% 5% auto;
+    grid-template-rows: 45% auto;
+    grid-column: 1/2;
     grid-row: 5/6;
-    display: grid;
-    grid-template-rows: auto 2vw auto;
-    grid-template-columns: 45vw 5vw 50vw;
-    border: black solid 1px;
 }
 
-.Showcase3 {
-    grid-row: 7/8;
-    display: grid;
-    grid-template-rows: auto 2vw auto;
-    grid-template-columns: 45vw 5vw auto;
-    border: black solid 1px;
-}
-
-.Showcase1 .ShowcaseImage {
+.showcase1 .showcaseimage, .showcase3 .showcaseimage {
     grid-column: 1/2;
-    grid-row: 1/4;
-    border: black solid 1px;
+    grid-row: 1/3;
 }
 
-.Showcase2 .ShowcaseImage {
+.showcase2 .showcaseimage {
     grid-column: 3/4;
-    grid-row: 1/4;
-    border: black solid 1px;
+    grid-row: 1/3;
 }
 
-.Showcase3 .ShowcaseImage {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    border: black solid 1px;
-}
-
-.Showcase1 .ShowcaseTitle {
-    grid-column: 2/4;
-    grid-row: 1/2;
-    border: black solid 1px;
-}
-
-.Showcase2 .ShowcaseTitle {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border: black solid 1px;
-}
-
-.Showcase3 .ShowcaseTitle {
+.showcase1 .showcasetitle, .showcase3 .showcasetitle {
     grid-column: 3/4;
     grid-row: 1/2;
-    border: black solid 1px;
 }
 
-.Showcase1 .ShowcaseDescription {
-    grid-column: 3/4;
-    grid-row: 3/4;
-    border: black solid 1px;
-}
-
-.Showcase2 .ShowcaseDescription {
+.showcase2 .showcasetitle {
     grid-column: 1/2;
-    grid-row: 3/4;
-    border: black solid 1px;
+    grid-row: 1/2;
 }
 
-.Showcase3 .ShowcaseDescription {
+.showcase1 .showcasedescription, .showcase3 .showcasedescription {
     grid-column: 3/4;
-    grid-row: 3/4;
-    border: black solid 1px;
+    grid-row: 2/3;
+}
+
+.showcase2 .showcasedescription {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.showcaseimage {
+    width: 100%;
+    height: 100%;
 }

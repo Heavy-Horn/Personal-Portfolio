@@ -1,13 +1,23 @@
-.Logo {
+.logo {
     width: 5vw;
     height: 5vw;
-    display: inline-block;
+    padding: 1vw;
+    margin-right: 10vw;
 }
 
-nav li {
-    display: inline-block;
+.navigation li {
+    display: inline-flex;
+    padding-right: 1vw;
 }
 
-nav a {
+.items {
+    align-items: center;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.navigation a {
     text-decoration: none;
 }
