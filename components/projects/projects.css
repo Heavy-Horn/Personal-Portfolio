@@ -8,6 +8,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     font-family: inter;
+    text-align: center;
 }
 
 .projects {

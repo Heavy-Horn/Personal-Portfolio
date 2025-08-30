@@ -1,5 +1,5 @@
 footer {
-    background-color: yellow;
+    background-color: #1E2019;
     width: 98%;
     display: inline-flex;
     padding: 1%;
@@ -8,6 +8,7 @@ footer {
 footer p {
     width: 100%;
     font-family: inter;
+    color: #FCFAF9;
 }
 
 footer ul {
@@ -19,6 +20,11 @@ footer ul {
     justify-content: right;
 }
 
+footer a {
+    color: #FCFAF9;
+    text-decoration: none;
+}
+
 footer li {
     padding-right: 2vw;
     font-family: inter;
@@ -26,4 +32,5 @@ footer li {
 
 body {
     margin: 0;
+    background-color: #FCFAF9;
 }

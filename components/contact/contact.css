@@ -10,6 +10,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     font-family: inter;
+    text-align: center;
 }
 
 .description {
@@ -23,35 +24,74 @@
     grid-row: 6/7;
     display: grid;
     grid-template-columns: auto 5vw auto;
-    grid-template-rows: 5vw 4vw 6vw 4vw 20vw 3vw 5vw;
+    grid-template-rows: 5vw 3vw 5vw 3vw 20vw 3vw 5vw;
 }
 
 #name {
+    background-color: #FCFAF9;
+    border: 1px solid #1E2019;
     grid-column: 1/4;
     grid-row: 1/2;
     font-family: inter;
+    padding: 1vw;
+    border-radius: 5px;
 }
 
 #email {
+    background-color: #FCFAF9;
+    border: 1px solid #1E2019;
     grid-column: 1/4;
     grid-row: 3/4;
     font-family: inter;
+    padding: 1vw;
+    border-radius: 5px;
 }
 
 #message {
+    background-color: #FCFAF9;
+    border: 1px solid #1E2019;
     grid-column: 1/4;
     grid-row: 5/6;
     font-family: inter;
+    padding: 1vw;
+    resize: none;
+    border-radius: 5px;
+}
+
+#name:hover {
+    border: 2px solid #52528C;
+    background-color: #FCFAF9;
+    border-radius: 5px;
+}
+
+#email:hover {
+    border: 2px solid #52528C;
+    background-color: #FCFAF9;
+    border-radius: 5px;
+}
+
+#message:hover {
+    border: 2px solid #52528C;
+    background-color: #FCFAF9;
+    border-radius: 5px;
 }
 
 .button {
     grid-column: 1/2;
     grid-row: 7/8;
     font-family: inter;
+    border-radius: 10px;
+    border: 2px solid #52528C;
+    background-color:#FCFAF9;
+}
+
+.button:hover {
+    border: 2px solid #1E2019;
+    background-color: #52528C;
+    color: #FCFAF9;
 }
 
 .secondary {
     grid-row: 7/8;
     grid-column: 3/4;
-    font-family: inter;
 }
