@@ -4,13 +4,6 @@
     grid-template-rows: 10vw auto 5vw;
 }
 
-.title {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-family: inter;
-    text-align: center;
-}
-
 .projects {
     display: grid;
     grid-column: 1/2;
@@ -54,35 +47,89 @@
     grid-row: 1/3;
 }
 
-.showcase1 .showcasetitle, .showcase3 .showcasetitle {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    align-content: end;
-    font-family: inter;
-}
-
-.showcase2 .showcasetitle {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    text-align: right;
-    align-content: end;
-    font-family: inter;
-}
-
-.showcase1 .showcasedescription, .showcase3 .showcasedescription {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    font-family: inter;
-}
-
-.showcase2 .showcasedescription {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: right;
-    font-family: inter;
-}
-
 .showcaseimage {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 1080px) {    
+    .title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-family: inter;
+        font-size: 3.3vw;
+        text-align: center;
+    }
+    .showcase1 .showcasetitle, .showcase3 .showcasetitle {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        align-content: end;
+        font-family: inter;
+        font-size: 2.4vw;
+    }
+
+    .showcase2 .showcasetitle {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: right;
+        align-content: end;
+        font-family: inter;
+        font-size: 2.7vw;
+    }
+
+    .showcase1 .showcasedescription, .showcase3 .showcasedescription {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        font-family: inter;
+        font-size: 1.8vw;
+    }
+
+    .showcase2 .showcasedescription {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: right;
+        font-family: inter;
+        font-size: 1.8vw;
+    }
+}
+
+@media (min-width: 1080px) {
+    .title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-family: inter;
+        font-size: 2.2vw;
+        text-align: center;
+    }
+    .showcase1 .showcasetitle, .showcase3 .showcasetitle {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        align-content: end;
+        font-family: inter;
+        font-size: 2.2vw;
+    }
+
+    .showcase2 .showcasetitle {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: right;
+        align-content: end;
+        font-family: inter;
+        font-size: 2.2vw;
+    }
+
+    .showcase1 .showcasedescription, .showcase3 .showcasedescription {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        font-family: inter;
+        font-size: 1vw;
+    }
+
+    .showcase2 .showcasedescription {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: right;
+        font-family: inter;
+        font-size: 1vw;
+    }
 }

@@ -6,56 +6,12 @@
     grid-template-rows: 5vw 5vw 5vw 5vw 5vw auto 10vw;
 }
 
-.title {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-family: inter;
-    text-align: center;
-}
-
-.description {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    font-family: inter;
-}
-
 .contactform {
     grid-column: 1/2;
     grid-row: 6/7;
     display: grid;
     grid-template-columns: auto 5vw auto;
     grid-template-rows: 5vw 3vw 5vw 3vw 20vw 3vw 5vw;
-}
-
-#name {
-    background-color: #FCFAF9;
-    border: 1px solid #1E2019;
-    grid-column: 1/4;
-    grid-row: 1/2;
-    font-family: inter;
-    padding: 1vw;
-    border-radius: 5px;
-}
-
-#email {
-    background-color: #FCFAF9;
-    border: 1px solid #1E2019;
-    grid-column: 1/4;
-    grid-row: 3/4;
-    font-family: inter;
-    padding: 1vw;
-    border-radius: 5px;
-}
-
-#message {
-    background-color: #FCFAF9;
-    border: 1px solid #1E2019;
-    grid-column: 1/4;
-    grid-row: 5/6;
-    font-family: inter;
-    padding: 1vw;
-    resize: none;
-    border-radius: 5px;
 }
 
 #name:hover {
@@ -76,19 +32,128 @@
     border-radius: 5px;
 }
 
-.button {
-    grid-column: 1/2;
-    grid-row: 7/8;
-    font-family: inter;
-    border-radius: 10px;
-    border: 2px solid #52528C;
-    background-color:#FCFAF9;
-}
-
 .button:hover {
     border: 2px solid #1E2019;
     background-color: #52528C;
     color: #FCFAF9;
+}
+
+@media(max-width: 1080px) {
+    .title {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        font-family: inter;
+        font-size: 3.3vw;
+        text-align: center;
+    }
+
+    .description {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        font-family: inter;
+        font-size: 1.7vw;
+    }
+    .button {
+        grid-column: 1/2;
+        grid-row: 7/8;
+        font-family: inter;
+        font-size: 1.6vw;
+        border-radius: 10px;
+        border: 2px solid #52528C;
+        background-color:#FCFAF9;
+    }
+    #name {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        font-family: inter;
+        font-size: 1.3vw;
+        padding: 1vw;
+        border-radius: 5px;
+    }
+
+    #email {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        font-family: inter;
+        font-size: 1.3vw;
+        padding: 1vw;
+        border-radius: 5px;
+    }
+
+    #message {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 5/6;
+        font-family: inter;
+        font-size: 1.3vw;
+        padding: 1vw;
+        resize: none;
+        border-radius: 5px;
+    }
+}
+
+@media(min-width: 1080px) {
+    .title {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        font-family: inter;
+        font-size: 2.6vw;
+        text-align: center;
+    }
+
+    .description {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        font-family: inter;
+        font-size: 1.3vw;
+    }
+    .button {
+        grid-column: 1/2;
+        grid-row: 7/8;
+        font-family: inter;
+        font-size: 1.1vw;
+        border-radius: 10px;
+        border: 2px solid #52528C;
+        background-color:#FCFAF9;
+    }
+    #name {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        font-family: inter;
+        font-size: 1vw;
+        padding: 1vw;
+        border-radius: 5px;
+    }
+
+    #email {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        font-family: inter;
+        font-size: 1vw;
+        padding: 1vw;
+        border-radius: 5px;
+    }
+
+    #message {
+        background-color: #FCFAF9;
+        border: 1px solid #1E2019;
+        grid-column: 1/4;
+        grid-row: 5/6;
+        font-family: inter;
+        font-size: 1vw;
+        padding: 1vw;
+        resize: none;
+        border-radius: 5px;
+    }
 }
 
 .secondary {
