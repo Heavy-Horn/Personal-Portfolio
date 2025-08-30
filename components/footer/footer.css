@@ -1,0 +1,29 @@
+footer {
+    background-color: yellow;
+    width: 98%;
+    display: inline-flex;
+    padding: 1%;
+}
+
+footer p {
+    width: 100%;
+    font-family: inter;
+}
+
+footer ul {
+    margin: 0;
+    display: inline-flex;
+    list-style-type: none;
+    align-items: center;
+    width: 80%;
+    justify-content: right;
+}
+
+footer li {
+    padding-right: 2vw;
+    font-family: inter;
+}
+
+body {
+    margin: 0;
+}

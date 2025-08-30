@@ -8,6 +8,7 @@
 .navigation li {
     display: inline-flex;
     padding-right: 1vw;
+    font-family: inter;
 }
 
 .items {
