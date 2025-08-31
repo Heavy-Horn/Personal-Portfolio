@@ -4,7 +4,7 @@
         margin-right: 2vw;
         display: grid;
         grid-template-columns: 10vw 30vw 7vw auto;
-        grid-template-rows: 7vw 7vw 30vw 10vw auto 7vw;
+        grid-template-rows: 7vw 7vw 30vw 10vw auto 10vw;
     }
     .welcomemessage {
         grid-column: 4/5;
@@ -27,7 +27,7 @@
         margin-right: 2vw;
         display: grid;
         grid-template-columns: 10vw 20vw 7vw auto;
-        grid-template-rows: 7vw 7vw 20vw 10vw auto 7vw;
+        grid-template-rows: 7vw 7vw 20vw 10vw auto 10vw;
     }
     .welcomemessage {
         grid-column: 4/5;
@@ -80,6 +80,7 @@
 .gallery {
     height: 100%;
     width: 100%;
+    object-fit: cover;
     border: 0.4vh solid #1E2019;
     border-radius: 5px;
 }
@@ -92,6 +93,7 @@
 .gallerysecond {
     grid-column: 3/4;
     grid-row: 1/2;
+    object-position: left;
 }
 
 .gallerylast {

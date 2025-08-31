@@ -50,6 +50,8 @@
 .showcaseimage {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 @media (max-width: 1080px) {    
