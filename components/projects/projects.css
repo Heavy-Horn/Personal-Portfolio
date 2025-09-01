@@ -2,6 +2,17 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 10vw auto 5vw;
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #52528C;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1E2019;  
 }
 
 .projects {

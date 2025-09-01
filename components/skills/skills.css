@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 10vw 37vw 1vw 1vw 1vw 37vw auto;
     grid-template-rows: 2vw 5vw 25vw 1vw 1vw 1vw auto 2vh;
+    flex-grow: 1;
 }
 
 .profile {

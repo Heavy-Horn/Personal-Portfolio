@@ -4,6 +4,21 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 5vw 5vw 5vw 5vw 5vw auto 10vw;
+    flex-grow: 1;
+}
+
+.fa {
+    text-decoration: none;
+    color: #1E2019;
+}
+
+.fa:hover {
+    text-decoration: none;
+    color: #52528C;
+}
+
+span {
+    font-family: inter;
 }
 
 .contactform {
@@ -43,7 +58,7 @@
         grid-column: 1/2;
         grid-row: 2/3;
         font-family: inter;
-        font-size: 3.3vw;
+        font-size: 2.2em;
         text-align: center;
     }
 
@@ -51,13 +66,15 @@
         grid-column: 1/2;
         grid-row: 4/5;
         font-family: inter;
-        font-size: 1.7vw;
+        font-size: 1em;
+        text-align: center;
+        line-height: 3vh;
     }
     .button {
         grid-column: 1/2;
         grid-row: 7/8;
         font-family: inter;
-        font-size: 1.6vw;
+        font-size: 1.2em;
         border-radius: 10px;
         border: 2px solid #52528C;
         background-color:#FCFAF9;
@@ -68,7 +85,7 @@
         grid-column: 1/4;
         grid-row: 1/2;
         font-family: inter;
-        font-size: 1.3vw;
+        font-size: 1em;
         padding: 1vw;
         border-radius: 5px;
     }
@@ -79,7 +96,7 @@
         grid-column: 1/4;
         grid-row: 3/4;
         font-family: inter;
-        font-size: 1.3vw;
+        font-size: 1em;
         padding: 1vw;
         border-radius: 5px;
     }
@@ -90,7 +107,7 @@
         grid-column: 1/4;
         grid-row: 5/6;
         font-family: inter;
-        font-size: 1.3vw;
+        font-size: 1em;
         padding: 1vw;
         resize: none;
         border-radius: 5px;
@@ -110,7 +127,9 @@
         grid-column: 1/2;
         grid-row: 4/5;
         font-family: inter;
-        font-size: 1.3vw;
+        font-size: 1.3em;
+        text-align: center;
+        line-height: 3vh;
     }
     .button {
         grid-column: 1/2;
