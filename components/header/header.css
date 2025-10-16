@@ -1,8 +1,11 @@
+.navigation {
+    align-self: center;;
+}
+
 .logo {
-    width: 5vw;
-    height: 5vw;
-    padding: 1vw;
-    margin-right: 10vw;
+    width: 10vw;
+    height: 10vw;
+    padding-top: 1vh;
 }
 
 .navigation a:hover {
@@ -27,6 +30,7 @@
     .navigation li {
         display: inline-flex;
         padding-right: 2vw;
+        padding-left: 2vw;
         font-family: inter;
         font-size: 2vw;
     }
@@ -36,6 +40,7 @@
     .navigation li {
         display: inline-flex;
         padding-right: 2vw;
+        padding-left: 2vw;
         font-family: inter;
         font-size: 1.4vw;
     }

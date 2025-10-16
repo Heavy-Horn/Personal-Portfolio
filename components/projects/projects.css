@@ -72,6 +72,7 @@ a:hover {
         font-family: inter;
         font-size: 3.3vw;
         text-align: center;
+        text-decoration: underline;
     }
     .showcase1 .showcasetitle, .showcase3 .showcasetitle {
         grid-column: 3/4;
