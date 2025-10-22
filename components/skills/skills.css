@@ -104,3 +104,7 @@
         color: #FCFAF9;
     }   
 }
+
+.hidden {
+    display: none;
+}

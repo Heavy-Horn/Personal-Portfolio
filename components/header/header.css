@@ -29,18 +29,18 @@
 @media (max-width: 1280px) {
     .navigation li {
         display: inline-flex;
-        padding-right: 2vw;
-        padding-left: 2vw;
+        justify-content: center;
         font-family: inter;
         font-size: 2vw;
+        width: 10vw;
     }
 }
 
 @media (min-width: 1280px) {
     .navigation li {
         display: inline-flex;
-        padding-right: 2vw;
-        padding-left: 2vw;
+        justify-content: center;
+        width: 10vw;
         font-family: inter;
         font-size: 1.4vw;
     }
