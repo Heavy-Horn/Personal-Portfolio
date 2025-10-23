@@ -101,3 +101,17 @@
     grid-column: 5/6;
     grid-row: 1/2;
 }
+
+.fa {
+    color:#1E2019;
+    text-decoration: none;
+}
+
+.fa:hover {
+    text-decoration: none;
+    color: #52528C;
+}
+
+span {
+    font-family: inter;
+}

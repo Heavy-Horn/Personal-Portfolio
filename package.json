@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DylanFry/portfolio-project/issues"
   },
-  "homepage": "https://github.com/DylanFry/portfolio-project#readme"
+  "homepage": "https://github.com/DylanFry/portfolio-project#readme",
+  "dependencies": {
+    "firebase": "^12.4.0"
+  }
 }

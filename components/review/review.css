@@ -7,35 +7,15 @@
     flex-grow: 1;
 }
 
-.fa {
-    text-decoration: none;
-    color: #1E2019;
-}
-
-.fa:hover {
-    text-decoration: none;
-    color: #52528C;
-}
-
-span {
-    font-family: inter;
-}
-
-.contactform {
+#reviewForm {
     grid-column: 1/2;
     grid-row: 6/7;
     display: grid;
-    grid-template-columns: auto 5vw auto;
-    grid-template-rows: 5vw 3vw 5vw 3vw 20vw 3vw 5vw;
+    grid-template-columns: auto 5vw auto 5vw auto;
+    grid-template-rows: 5vw 3vw 20vw 3vw 5vw;
 }
 
 #name:hover {
-    border: 2px solid #52528C;
-    background-color: #FCFAF9;
-    border-radius: 5px;
-}
-
-#email:hover {
     border: 2px solid #52528C;
     background-color: #FCFAF9;
     border-radius: 5px;
@@ -47,7 +27,7 @@ span {
     border-radius: 5px;
 }
 
-.button:hover {
+#submitForm:hover {
     border: 2px solid #1E2019;
     background-color: #52528C;
     color: #FCFAF9;
@@ -70,9 +50,9 @@ span {
         text-align: center;
         line-height: 3vh;
     }
-    .button {
+    #submitForm {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 5/6;
         font-family: inter;
         font-size: 1.2em;
         border-radius: 10px;
@@ -82,7 +62,7 @@ span {
     #name {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 1/4;
+        grid-column: 3/4;
         grid-row: 1/2;
         font-family: inter;
         font-size: 1em;
@@ -90,22 +70,23 @@ span {
         border-radius: 5px;
     }
 
-    #email {
-        background-color: #FCFAF9;
-        border: 1px solid #1E2019;
-        grid-column: 1/4;
-        grid-row: 3/4;
-        font-family: inter;
-        font-size: 1em;
+    #rating {
+        grid-column: 5/6;
+        grid-row: 1/2;
         padding: 1vw;
+    }
+
+    #projectSelector {
+        grid-column: 1/2;
+        grid-row: 1/2;
         border-radius: 5px;
     }
 
     #message {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 1/4;
-        grid-row: 5/6;
+        grid-column: 1/6;
+        grid-row: 3/4;
         font-family: inter;
         font-size: 1em;
         padding: 1vw;
@@ -131,9 +112,9 @@ span {
         text-align: center;
         line-height: 3vh;
     }
-    .button {
+    #submitForm {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 5/6;
         font-family: inter;
         font-size: 1.1vw;
         border-radius: 10px;
@@ -143,7 +124,7 @@ span {
     #name {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 1/4;
+        grid-column: 3/4;
         grid-row: 1/2;
         font-family: inter;
         font-size: 1vw;
@@ -151,22 +132,23 @@ span {
         border-radius: 5px;
     }
 
-    #email {
-        background-color: #FCFAF9;
-        border: 1px solid #1E2019;
-        grid-column: 1/4;
-        grid-row: 3/4;
-        font-family: inter;
-        font-size: 1vw;
-        padding: 1vw;
+    #projectSelector {
+        grid-column: 1/2;
+        grid-row: 1/2;
         border-radius: 5px;
+    }
+
+    #rating {
+        grid-column: 5/6;
+        grid-row: 1/2;
+        font-size: 3em;
     }
 
     #message {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 1/4;
-        grid-row: 5/6;
+        grid-column: 1/6;
+        grid-row: 3/4;
         font-family: inter;
         font-size: 1vw;
         padding: 1vw;
@@ -178,4 +160,9 @@ span {
 .secondary {
     grid-row: 7/8;
     grid-column: 3/4;
+}
+
+.warning {
+    background: red !important;
+    border-radius: 5px;
 }
