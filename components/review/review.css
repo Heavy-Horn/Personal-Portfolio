@@ -1,12 +1,3 @@
-.wrapper {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 5vw 5vw 5vw 5vw 5vw auto 10vw;
-    flex-grow: 1;
-}
-
 #reviewForm {
     grid-column: 1/2;
     grid-row: 6/7;
@@ -34,6 +25,15 @@
 }
 
 @media(max-width: 1080px) {
+    .wrapper {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 5vw 5vw 5vw 5vw 5vw auto 10vw;
+        flex-grow: 1;
+    }
+
     .title {
         grid-column: 1/2;
         grid-row: 2/3;
@@ -62,7 +62,7 @@
     #name {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 3/4;
+        grid-column: 5/6;
         grid-row: 1/2;
         font-family: inter;
         font-size: 1em;
@@ -71,9 +71,10 @@
     }
 
     #rating {
-        grid-column: 5/6;
+        grid-column: 3/4;
         grid-row: 1/2;
         padding: 1vw;
+        align-self: center;
     }
 
     #projectSelector {
@@ -96,11 +97,20 @@
 }
 
 @media(min-width: 1080px) {
+    .wrapper {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2vw 5vw 2vw 5vw 1vw auto 5vw;
+        flex-grow: 1;
+    }
+
     .title {
         grid-column: 1/2;
         grid-row: 2/3;
         font-family: inter;
-        font-size: 2.6vw;
+        font-size: 2.4vw;
         text-align: center;
     }
 
@@ -124,10 +134,10 @@
     #name {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
-        grid-column: 3/4;
+        grid-column: 5/6;
         grid-row: 1/2;
         font-family: inter;
-        font-size: 1vw;
+        font-size: 1.2em;
         padding: 1vw;
         border-radius: 5px;
     }
@@ -136,12 +146,17 @@
         grid-column: 1/2;
         grid-row: 1/2;
         border-radius: 5px;
+        height: fit-content;
+        align-self: center;
+        font-size: 1.2em;
+        padding: 1vw;
     }
 
     #rating {
-        grid-column: 5/6;
+        grid-column: 3/4;
         grid-row: 1/2;
-        font-size: 3em;
+        font-size: 2em;
+        align-self: center;
     }
 
     #message {
@@ -154,6 +169,8 @@
         padding: 1vw;
         resize: none;
         border-radius: 5px;
+        padding: 1vw;
+        
     }
 }
 
