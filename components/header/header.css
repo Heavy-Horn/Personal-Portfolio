@@ -1,5 +1,6 @@
 .navigation {
-    align-self: center;;
+    align-self: center;
+    overflow: hidden;
 }
 
 .navigation a:hover {

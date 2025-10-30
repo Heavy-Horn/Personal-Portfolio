@@ -38,6 +38,7 @@ body {
         background-color: #1E2019;
         display: inline-flex;
         padding: 0.5%;
+        overflow: hidden;
     }
 }
 
@@ -60,6 +61,7 @@ body {
         width: 98%;
         display: inline-flex;
         padding: 1%;
+        overflow: hidden;
     }
 }
 
