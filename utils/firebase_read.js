@@ -2,92 +2,75 @@ import { getDatabase, ref, get} from "https://www.gstatic.com/firebasejs/10.12.2
 
 const db = getDatabase()
 
-const pastReviews = document.getElementById("pastReviews")
+const userName = document.getElementById("name")
 
-const p1Posts = ref(db, 'reviews/project1')
-const p2Posts = ref(db, 'reviews/project2')
-const p3Posts = ref(db, 'reviews/project3')
+const firstStar = document.getElementById("1Star")
+const secondStar = document.getElementById("2Stars")
+const thirdStar = document.getElementById("3Stars")
+const fourthStar = document.getElementById("4Stars")
+const fifthStar = document.getElementById("5Stars")
 
-const formatter = new Intl.DateTimeFormat('en-US', {
-	year: 'numeric',
-	month: 'short',
-	day: 'numeric',
-	hour: '2-digit',
-	minute: '2-digit',
-	timeZoneName: 'short'
-});
+const userComment = document.getElementById("message")
 
-async function getPostsFrom (user) {
+const projectSelect = document.getElementById("projectSelector")
+let projectNum = 0
 
-	get(p1Posts).then((snapshot) => {
+projectSelect.addEventListener("change", function() {
+	projectNum = projectSelect.value
+
+	const posts = ref(db, 'reviews/project' + projectNum + "/Test Mctest")
+
+	get(posts).then((snapshot) => {
 		const data = snapshot.val()
-
 		if(data != null) {
-			const dataKeys = Object.keys(data)
+			userName.value = data.name
+			userComment.value = data.comment
 
-			for(let i = 0; i < dataKeys.length; i++) {
-				if(data[dataKeys[i]].name == user) {
-					const review = document.createElement("p")
-					review.innerHTML = data[dataKeys[i]].comment
-					pastReviews.appendChild(review)
-				}
+			switch (data.rating) {
+				case 1:
+					firstStar.classList = ("fa fa-star")
+					secondStar.classList = ("fa fa-star-o")
+					thirdStar.classList = ("fa fa-star-o")
+					fourthStar.classList = ("fa fa-star-o")
+					fifthStar.classList = ("fa fa-star-o")
+				case 2:
+					firstStar.classList = ("fa fa-star")
+					secondStar.classList = ("fa fa-star")
+					thirdStar.classList = ("fa fa-star-o")
+					fourthStar.classList = ("fa fa-star-o")
+					fifthStar.classList = ("fa fa-star-o")
+				case 3:
+					firstStar.classList = ("fa fa-star")
+					secondStar.classList = ("fa fa-star")
+					thirdStar.classList = ("fa fa-star")
+					fourthStar.classList = ("fa fa-star-o")
+					fifthStar.classList = ("fa fa-star-o")
+					break
+				case 4:
+					firstStar.classList = ("fa fa-star")
+					secondStar.classList = ("fa fa-star")
+					thirdStar.classList = ("fa fa-star")
+					fourthStar.classList = ("fa fa-star")
+					fifthStar.classList = ("fa fa-star-o")
+				case 5:
+					firstStar.classList = ("fa fa-star")
+					secondStar.classList = ("fa fa-star")
+					thirdStar.classList = ("fa fa-star")
+					fourthStar.classList = ("fa fa-star")
+					fifthStar.classList = ("fa fa-star")
+				default:
+					break
 			}
+
+		} else {
+			userName.value = ""
+			userComment.value = ""
+			
+			firstStar.classList = ("fa fa-star-o")
+			secondStar.classList = ("fa fa-star-o")
+			thirdStar.classList = ("fa fa-star-o")
+			fourthStar.classList = ("fa fa-star-o")
+			fifthStar.classList = ("fa fa-star-o")
 		}
 	})
-
-	get(p2Posts).then((snapshot) => {
-		const data = snapshot.val()
-
-		if(data != null) {
-			const dataKeys = Object.keys(data)
-
-			for(let i = 0; i < dataKeys.length; i++) {
-				if(data[dataKeys[i]].name == user) {
-					const date = new Date(data[dataKeys[i]].time)
-					const formattedDateTime = formatter.format(date);
-					
-					let starRating = document.createElement("div")
-					starRating.classList.add("starRating")
-
-					for(let x = 0; x < data[dataKeys[i]].rating; x++){
-						starRating.innerHTML += (`<i class="fa fa-star"></i>`)
-					}
-					for(let y = 0; y < 5-data[dataKeys[i]].rating; y++){
-						starRating.innerHTML += (`<i class="fa fa-star-o"></i>`)
-					}
-
-					const review = document.createElement("div")
-					review.classList.add("pastReviewWrapper")
-					review.innerHTML = `
-					<h3 class="name">${data[dataKeys[i]].name}</h3>
-					<p class="comment">${data[dataKeys[i]].comment}</p>
-					<p class="time">${formattedDateTime}</p>
-					`
-
-					review.appendChild(starRating)
-
-					pastReviews.appendChild(review)
-
-				}
-			}
-		}
-	})
-
-	get(p3Posts).then((snapshot) => {
-		const data = snapshot.val()
-
-		if(data != null) {
-			const dataKeys = Object.keys(data)
-
-			for(let i = 0; i < dataKeys.length; i++) {
-				if(data[dataKeys[i]].name == user) {
-					const review = document.createElement("p")
-					review.innerHTML = data[dataKeys[i]].comment
-					pastReviews.appendChild(review)
-				}
-			}
-		}
-	})
-}
-
-getPostsFrom("Test Mctest")
+})

@@ -117,11 +117,7 @@ sendReview.addEventListener("click", function() {
 
 		let projectnum = project.value
 
-		let uid = `${Math.random()}${rating}${userComment.value.length}${userName.value[0]}${userComment.value[userComment.value.length - 1]}${userName.value.length}${Math.random()}`
-
-		uid = uid.replaceAll(".", "")
-
-		set(ref(db, 'reviews/project' + projectnum + '/' + uid),{
+		set(ref(db, 'reviews/project' + projectnum + '/' + userName.value),{
 			name: userName.value,
 			comment: userComment.value,
 			rating: rating,
