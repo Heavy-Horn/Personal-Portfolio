@@ -1,6 +1,7 @@
 .reviewWrapper {
-    width: fit-content;
-    background-color: bisque;
+    float: left;
+    width: 33vw;
+    border: 1px #1E2019 solid;
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -8,6 +9,19 @@
 
 .name, .comment, .time {
     margin: 0;
+    font-family: inter;
+}
+
+#p1Reviews, #p2Reviews, #p3Reviews {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    white-space: nowrap;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .pageWrapper {
@@ -54,9 +68,17 @@
     grid-row: 5/6;
 }
 
-.projectDescriptionWrapper {
+.projectDescriptionWrapperL2R {
     display: grid;
-    grid-template-columns: auto 8vw auto;
+    grid-template-columns: 55% 8% auto;
+    grid-template-rows: auto auto;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.projectDescriptionWrapperR2L {
+    display: grid;
+    grid-template-columns: auto 8% 55%;
     grid-template-rows: auto auto;
     grid-row: 1/2;
     grid-column: 1/2;
