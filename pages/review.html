@@ -17,6 +17,7 @@
     <script type="module" src="../utils/firebase_create.js"></script>
     <script type="module" src="../utils/firebase_read.js"></script>
     <script type="module" src="../utils/firebase_delete.js"></script>
+    <script type="module" src="../utils/firebase_login.js"></script>
 
     <title>Review | Dylan Fry</title>
 </head>
@@ -24,11 +25,28 @@
 
     <div id="placeholder"></div>
     
-    <div class="wrapper">
+    <div id="signInPage">
+        <section id="signUpGroup">
+            <input class="userInput" id="signUpName" type="text" placeholder="Username">
+            <input class="userInput"  id="signUpEmail"  type="text" placeholder="Email">
+            <input class="userInput"  id="signUpPassword"  type="text" placeholder="Password" autocomplete="off">
+            <button class="userInput"  id="signUpButton">Sign Up</button>
+        </section>
+        <section id="signInGroup">
+            <input class="userInput"  id="signInEmail" type="text" placeholder="Email">
+            <input class="userInput"  id="signInPassword" type="text" placeholder="Password" autocomplete="off">
+            <button class="userInput"  id="signInButton">Log In</button>
+        </section>
+    </div>
+
+    <div id="mainPage" class="wrapper">
         <h1 class="title">Review a Project</h1>
         <p class="description">If you want to review one of the projects listed on this site, fill out the form below.</p>
         <div id="reviewForm">
-            <input type="text" id="name" placeholder="name">
+            <div id="identityControls">
+                <p id="name"></p>
+                <button class="userInput" id="signOut">Sign Out</button>
+            </div>
             <select id="projectSelector">
                 <option value="0">-- Select a project --</option>
                 <option value=1>SpinR</option>

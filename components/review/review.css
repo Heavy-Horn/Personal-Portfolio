@@ -1,15 +1,65 @@
+/* Sign In/Up Page */
+#signInPage {
+    display: grid;
+    grid-template-columns: auto 7% auto;
+    grid-template-rows: auto;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    margin: 4%;
+    flex-grow: 1;
+}
+
+#signInGroup {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    justify-items: center;
+    border: 1px solid #1E2019;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    padding: 4%;
+}
+
+#signUpGroup {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: grid;
+    justify-items: center;
+    border: 1px solid #1E2019;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    padding: 4%;
+}
+
+.userInput {
+    margin: 3%;
+    padding: 2%;
+}
+
+.userInput {
+    font-family: inter;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 2px solid #52528C;
+    background-color:#FCFAF9;
+}
+
+.userInput:hover {
+    border: 2px solid #1E2019;
+    background-color: #52528C;
+    color: #FCFAF9;
+}
+
+/* Main Page */
 #reviewForm {
     grid-column: 1/2;
     grid-row: 6/7;
     display: grid;
     grid-template-columns: auto 5vw auto 5vw auto;
     grid-template-rows: 5vw 3vw 20vw 3vw 5vw;
-}
-
-#name:hover {
-    border: 2px solid #52528C;
-    background-color: #FCFAF9;
-    border-radius: 5px;
 }
 
 #message:hover {
@@ -74,15 +124,23 @@
         border: 2px solid #52528C;
         background-color:#FCFAF9;
     }
-    #name {
+    #identityControls {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
         grid-column: 5/6;
         grid-row: 1/2;
         font-family: inter;
         font-size: 1em;
-        padding: 1vw;
+        padding: 2%;
         border-radius: 5px;
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto 2% auto;
+    }
+
+    #signOut {
+        grid-column: 3/4;
     }
 
     #rating {
@@ -146,15 +204,24 @@
         border: 2px solid #52528C;
         background-color:#FCFAF9;
     }
-    #name {
+
+    #identityControls {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
         grid-column: 5/6;
         grid-row: 1/2;
         font-family: inter;
         font-size: 1.2em;
-        padding: 1vw;
+        padding: 2%;
         border-radius: 5px;
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto 2% auto;
+    }
+
+    #signOut {
+        grid-column: 3/4;
     }
 
     #projectSelector {
@@ -174,6 +241,16 @@
         align-self: center;
     }
 
+    #deleteReview {
+        grid-column: 3/5;
+        grid-row: 5/6;
+        font-family: inter;
+        font-size: 1.2em;
+        border-radius: 10px;
+        border: 2px solid #52528C;
+        background-color:#FCFAF9;
+    }
+    
     #message {
         background-color: #FCFAF9;
         border: 1px solid #1E2019;
@@ -197,4 +274,8 @@
 .warning {
     background: red !important;
     border-radius: 5px;
+}
+
+.hidden {
+    display: none !important;
 }

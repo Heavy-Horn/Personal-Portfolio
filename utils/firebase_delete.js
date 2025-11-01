@@ -15,7 +15,7 @@ const comment = document.getElementById("message")
 const db = getDatabase()
 
 deleteButton.addEventListener("click", function() {
-	const path = ref(db, '/reviews/project' + project.value + "/" + user.value)
+	const path = ref(db, '/reviews/project' + project.value + "/" + user.innerHTML)
 
 	onValue(path, (snapshot) => {
 		if(snapshot.exists()) {
@@ -24,7 +24,6 @@ deleteButton.addEventListener("click", function() {
 					alert("Review Deleted Successfully")
 				)
 
-			user.value = ""
 			comment.value = ""
 			project.value = 0
 			

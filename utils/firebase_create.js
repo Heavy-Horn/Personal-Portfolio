@@ -84,7 +84,7 @@ sendReview.addEventListener("click", function() {
 
 		ratingBox.classList.add("warning")
 
-	} else if (userName.value.trim() == ""){
+	} else if (userName.innerHTML.trim() == ""){
 
 		userComment.classList.remove("warning")
 		ratingBox.classList.remove("warning")
@@ -117,8 +117,8 @@ sendReview.addEventListener("click", function() {
 
 		let projectnum = project.value
 
-		set(ref(db, 'reviews/project' + projectnum + '/' + userName.value),{
-			name: userName.value,
+		set(ref(db, 'reviews/project' + projectnum + '/' + userName.innerHTML),{
+			name: userName.innerHTML,
 			comment: userComment.value,
 			rating: rating,
 			time: serverTimestamp()
@@ -134,7 +134,6 @@ sendReview.addEventListener("click", function() {
 		rating = 0
 
 	// Reset name and comment box
-		userName.value = ''
 		userComment.value = ''
 		project.value = 0
 	}
