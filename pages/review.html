@@ -31,15 +31,15 @@
 
     <div id="signInPage" class="hidden">
         <section id="signUpGroup">
-            <input class="userInput" id="signUpName" type="text" placeholder="Username">
-            <input class="userInput"  id="signUpEmail"  type="text" placeholder="Email">
-            <input class="userInput"  id="signUpPassword"  type="text" placeholder="Password" autocomplete="off">
-            <button class="userInput"  id="signUpButton">Sign Up</button>
+            <input class="user-input" id="signUpName" type="text" placeholder="Username">
+            <input class="user-input"  id="signUpEmail"  type="text" placeholder="Email">
+            <input class="user-input"  id="signUpPassword"  type="text" placeholder="Password" autocomplete="off">
+            <button class="user-input"  id="signUpButton">Sign Up</button>
         </section>
         <section id="signInGroup">
-            <input class="userInput"  id="signInEmail" type="text" placeholder="Email">
-            <input class="userInput"  id="signInPassword" type="text" placeholder="Password" autocomplete="off">
-            <button class="userInput"  id="signInButton">Log In</button>
+            <input class="user-input"  id="signInEmail" type="text" placeholder="Email">
+            <input class="user-input"  id="signInPassword" type="text" placeholder="Password" autocomplete="off">
+            <button class="user-input"  id="signInButton">Log In</button>
         </section>
     </div>
 
@@ -54,38 +54,38 @@
 
         <section id="deleteConfirmation" class="popup hidden">
             <h1>Are you sure?</h1>
-            <button id="confirm" class="userInput">Delete</button>
-            <button id="cancel" class="userInput">Cancel</button>
+            <button id="confirm" class="user-input">Delete</button>
+            <button id="cancel" class="user-input">Cancel</button>
         </section>
 
         <section id="deleteSuccessMessage" class="popup hidden">
             <h1>Post Deleted Successfully</h1>
-            <button id="continue" class="userInput">Okay</button>
+            <button id="continue" class="user-input">Okay</button>
         </section>
 
         <h1 class="title">Review a Project</h1>
         <p class="description">If you want to review one of the projects listed on this site, fill out the form below.</p>
-        <div id="reviewForm">
-            <div id="identityControls">
+        <div id="reviewForm" class="review-form">
+            <div id="identityControls" class="identity-controls">
                 <p id="name"></p>
-                <button class="userInput" id="signOut">Sign Out</button>
+                <button class="user-input sign-out" id="signOut">Sign Out</button>
             </div>
-            <select id="projectSelector">
+            <select id="projectSelector" class="project-selector">
                 <option value="0">-- Select a project --</option>
                 <option value=1>SpinR</option>
                 <option value=2>Scriptux</option>
                 <option value=3>Patient Health Record</option>
             </select>
-            <div id="rating">
+            <div id="rating" class="rating">
                 <i class="fa fa-star-o" id="1Star"></i>
                 <i class="fa fa-star-o" id="2Stars"></i>
                 <i class="fa fa-star-o" id="3Stars"></i>
                 <i class="fa fa-star-o" id="4Stars"></i>
                 <i class="fa fa-star-o" id="5Stars"></i>
             </div>
-            <textarea id="message" placeholder="comment"></textarea>
-            <button id="submitForm">Submit Review</button>
-            <button id="deleteReview">Delete Review</button>
+            <textarea id="message" class="message" placeholder="comment"></textarea>
+            <button id="submitForm" class="submit-form">Submit Review</button>
+            <button id="deleteReview" class="delete-review">Delete Review</button>
         </div>
     </div>
     
