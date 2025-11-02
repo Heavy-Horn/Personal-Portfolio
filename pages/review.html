@@ -25,7 +25,11 @@
 
     <div id="placeholder"></div>
     
-    <div id="signInPage">
+    <div id="loadingPage">
+        <h1>Loading...</h1>
+    </div>
+
+    <div id="signInPage" class="hidden">
         <section id="signUpGroup">
             <input class="userInput" id="signUpName" type="text" placeholder="Username">
             <input class="userInput"  id="signUpEmail"  type="text" placeholder="Email">
@@ -39,7 +43,26 @@
         </section>
     </div>
 
-    <div id="mainPage" class="wrapper">
+    <div id="verificationPage" class="notice hidden">
+        <h1>Please Verify Your Account To Continue</h1>
+        <h2>An email should have been sent to you. If you haven't revieved one, check your spam.</h2>
+        <h2>If you still haven't revieved an email, <span id="resendButton">click here to try again.</span></h2>
+        <h3>Once you have verified your email, reload this page.</h3>
+    </div>
+
+    <div id="mainPage" class="wrapper hidden">
+
+        <section id="deleteConfirmation" class="popup hidden">
+            <h1>Are you sure?</h1>
+            <button id="confirm" class="userInput">Delete</button>
+            <button id="cancel" class="userInput">Cancel</button>
+        </section>
+
+        <section id="deleteSuccessMessage" class="popup hidden">
+            <h1>Post Deleted Successfully</h1>
+            <button id="continue" class="userInput">Okay</button>
+        </section>
+
         <h1 class="title">Review a Project</h1>
         <p class="description">If you want to review one of the projects listed on this site, fill out the form below.</p>
         <div id="reviewForm">
@@ -65,6 +88,7 @@
             <button id="deleteReview">Delete Review</button>
         </div>
     </div>
+    
     <div id="placeholderFooter"></div>
 </body>
 </html>

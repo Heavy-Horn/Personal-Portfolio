@@ -266,6 +266,40 @@
     }
 }
 
+.popup {
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    font-family: inter;
+    border-radius: 10px;
+    border: 2px solid #52528C;
+    background-color:#FCFAF9;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.notice {
+    align-self: center;
+    justify-self: center;
+    font-family: inter;
+    border-radius: 10px;
+    border: 2px solid #52528C;
+    background-color:#FCFAF9;
+    padding: 2%;
+    margin: 5%;
+    text-align: center;
+}
+
+.notice span {
+    color: #52528C;
+}
+
+.notice span:hover {
+    color: #1E2019;
+    cursor: pointer;
+}
+
 .secondary {
     grid-row: 7/8;
     grid-column: 3/4;

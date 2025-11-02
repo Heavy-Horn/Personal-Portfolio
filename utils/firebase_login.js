@@ -1,7 +1,14 @@
-import { sendEmailVerification, getAuth, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
-
 const page = document.getElementById("mainPage")
 const loginPage = document.getElementById("signInPage")
+const loadingPage = document.getElementById("loadingPage")
+const verificationAwaitPage = document.getElementById("verificationPage")
+
+loadingPage.classList.remove("hidden")
+loginPage.classList.add("hidden")
+page.classList.add("hidden")
+verificationAwaitPage.classList.add("hidden")
+
+import { sendEmailVerification, getAuth, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
 
 const signup = document.getElementById("signUpButton")
 const login = document.getElementById("signInButton")
@@ -19,13 +26,21 @@ const signUpName = document.getElementById("signUpName")
 const auth = getAuth()
 
 onAuthStateChanged(auth, (user) => {
-	console.log(user)
-	if (user) {
+	if (user && user.emailVerified) {
+		loadingPage.classList.add("hidden")
 		loginPage.classList.add("hidden")
 		page.classList.remove("hidden")
+		verificationAwaitPage.classList.add("hidden")
 		userNameDisplay.innerHTML = user.displayName
+	} else if(user) {
+		loadingPage.classList.add("hidden")
+		loginPage.classList.add("hidden")
+		page.classList.add("hidden")
+		verificationAwaitPage.classList.remove("hidden")
 	} else {
+		loadingPage.classList.add("hidden")
 		loginPage.classList.remove("hidden")
+		verificationAwaitPage.classList.add("hidden")
 		page.classList.add("hidden")
 	}
 })

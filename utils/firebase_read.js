@@ -33,12 +33,14 @@ projectSelect.addEventListener("change", function() {
 					thirdStar.classList = ("fa fa-star-o")
 					fourthStar.classList = ("fa fa-star-o")
 					fifthStar.classList = ("fa fa-star-o")
+					break
 				case 2:
 					firstStar.classList = ("fa fa-star")
 					secondStar.classList = ("fa fa-star")
 					thirdStar.classList = ("fa fa-star-o")
 					fourthStar.classList = ("fa fa-star-o")
 					fifthStar.classList = ("fa fa-star-o")
+					break
 				case 3:
 					firstStar.classList = ("fa fa-star")
 					secondStar.classList = ("fa fa-star")
@@ -52,12 +54,14 @@ projectSelect.addEventListener("change", function() {
 					thirdStar.classList = ("fa fa-star")
 					fourthStar.classList = ("fa fa-star")
 					fifthStar.classList = ("fa fa-star-o")
+					break
 				case 5:
 					firstStar.classList = ("fa fa-star")
 					secondStar.classList = ("fa fa-star")
 					thirdStar.classList = ("fa fa-star")
 					fourthStar.classList = ("fa fa-star")
 					fifthStar.classList = ("fa fa-star")
+					break
 				default:
 					break
 			}

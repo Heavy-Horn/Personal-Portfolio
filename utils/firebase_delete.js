@@ -1,5 +1,17 @@
 import { getDatabase, ref, remove, onValue} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"
 
+import { getAuth, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
+
+const auth = getAuth()
+
+const resend = document.getElementById("resendButton")
+
+const deleteConfirmWindow = document.getElementById("deleteConfirmation")
+const deleteSuccessWindow = document.getElementById("deleteSuccessMessage")
+const confirmDeleteButton = document.getElementById("confirm")
+const cancelButton = document.getElementById("cancel")
+const closeWindowButton = document.getElementById("continue")
+
 const deleteButton = document.getElementById("deleteReview")
 const project = document.getElementById("projectSelector")
 const user = document.getElementById("name")
@@ -15,15 +27,19 @@ const comment = document.getElementById("message")
 const db = getDatabase()
 
 deleteButton.addEventListener("click", function() {
+	deleteConfirmWindow.classList.remove("hidden")
+})
+
+confirmDeleteButton.addEventListener("click", function(){
 	const path = ref(db, '/reviews/project' + project.value + "/" + user.innerHTML)
 
 	onValue(path, (snapshot) => {
 		if(snapshot.exists()) {
 			remove(path)
-				.then(
-					alert("Review Deleted Successfully")
-				)
 
+			deleteConfirmWindow.classList.add("hidden")
+			deleteSuccessWindow.classList.remove("hidden")
+			
 			comment.value = ""
 			project.value = 0
 			
@@ -34,4 +50,16 @@ deleteButton.addEventListener("click", function() {
 			rating5.classList = "fa fa-star-o"
 		}
 	})
+})
+
+cancelButton.addEventListener("click", function() {
+	deleteConfirmWindow.classList.add("hidden")
+})
+
+closeWindowButton.addEventListener("click", function() {
+	deleteSuccessWindow.classList.add("hidden")
+})
+
+resend.addEventListener("click", function() {
+	sendEmailVerification(auth.currentUser)
 })
