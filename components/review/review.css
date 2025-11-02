@@ -1,5 +1,5 @@
 /* Sign In/Up Page */
-#sign-in-page {
+.sign-in-page {
   display: grid;
   grid-template-columns: auto 7% auto;
   grid-template-rows: auto;
@@ -10,7 +10,7 @@
   flex-grow: 1;
 }
 
-#sign-in-group {
+.sign-in-group {
   grid-column: 1/2;
   grid-row: 1/2;
   display: grid;
@@ -22,7 +22,7 @@
   padding: 4%;
 }
 
-#sign-up-group {
+.sign-up-group {
   grid-column: 3/4;
   grid-row: 1/2;
   display: grid;
