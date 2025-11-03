@@ -293,6 +293,7 @@
   padding: 2%;
   margin: 5%;
   text-align: center;
+  flex-grow: 1;
 }
 
 .notice span {

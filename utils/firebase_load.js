@@ -21,6 +21,7 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 });
 
 async function loadReviews () {
+  console.log("Loading Reviews")
   get(p1Posts).then((snapshot) => {
     const data = snapshot.val();
     if(data != null) {
@@ -40,7 +41,7 @@ async function loadReviews () {
         };
         
         const review = document.createElement("div");
-        review.classList.add("reviewWrapper");
+        review.classList.add("review-wrapper");
         review.innerHTML = `
         <h3 class="name">${data[dataKeys[i]].name}</h3>
         <p class="comment">${data[dataKeys[i]].comment}</p>
@@ -50,6 +51,7 @@ async function loadReviews () {
         p1Reviews.appendChild(review);
       };
     };
+    console.log("Project 1 Reviews Loaded")
   });
   
   get(p2Posts).then((snapshot) => {
@@ -71,7 +73,7 @@ async function loadReviews () {
         };
 
         const review = document.createElement("div");
-        review.classList.add("reviewWrapper");
+        review.classList.add("review-wrapper");
         review.innerHTML = `
         <h3 class="name">${data[dataKeys[i]].name}</h3>
         <p class="comment">${data[dataKeys[i]].comment}</p>
@@ -81,6 +83,7 @@ async function loadReviews () {
         p2Reviews.appendChild(review);
       };
     };
+    console.log("Project 2 Reviews Loaded")
   });
   
   get(p3Posts).then((snapshot) => {
@@ -102,7 +105,7 @@ async function loadReviews () {
         };
 
         const review = document.createElement("div");
-        review.classList.add("reviewWrapper");
+        review.classList.add("review-wrapper");
         review.innerHTML = `
         <h3 class="name">${data[dataKeys[i]].name}</h3>
         <p class="comment">${data[dataKeys[i]].comment}</p>
@@ -112,6 +115,7 @@ async function loadReviews () {
         p3Reviews.appendChild(review);
       };
     };
+    console.log("Project 3 Reviews Loaded")
   });
 };
 

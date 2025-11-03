@@ -17,11 +17,14 @@ const db = getDatabase();
 let projectNum = 0;
 
 projectSelect.addEventListener("change", () => {
+  console.log("Project Changed")
   projectNum = projectSelect.value;
   const posts = ref(db, `reviews/project${projectNum}/${userName.innerHTML}`);
   get(posts).then((snapshot) => {
+    console.log("Post Fetched")
     const data = snapshot.val();
     if(data != null) {
+      console.log("Review Exists")
       userName.innerHTML = data.name;
       userComment.value = data.comment;
       switch (data.rating) {
@@ -63,7 +66,9 @@ projectSelect.addEventListener("change", () => {
         default:
           break;
       };
+      console.log("Review Loaded")
     } else {
+     console.log("No Review Found")
       userComment.value = '';
       firstStar.classList = ("fa fa-star-o");
       secondStar.classList = ("fa fa-star-o");

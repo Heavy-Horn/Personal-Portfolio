@@ -7,6 +7,10 @@
   margin: 1%;
 }
 
+.loading {
+  flex-grow: 1;
+}
+
 .name,
 .comment,
 .time {
@@ -28,6 +32,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
+  flex-grow: 1;
 }
 
 .title {
